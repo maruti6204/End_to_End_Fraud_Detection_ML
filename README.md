@@ -93,84 +93,81 @@ Loan default is a major challenge in banking and fintech. This project builds a 
 ---
 
 ## 💰 Business Cost Formula
-⚙️ Methodology
-Data Cleaning
-Feature Engineering
-Train-Test Split
-Handling Imbalance (SMOTE)
-Model Training
-Hyperparameter Tuning
-Cross Validation
-Threshold Optimization
-🤖 Models Used
-🔹 Logistic Regression
-Baseline interpretable model
-🔹 XGBoost Classifier
-High-performance boosting model
-Captures complex relationships
-📈 Model Performance
-Model	Accuracy	Recall (Default)	ROC-AUC
-Logistic Regression	~68%	~69%	~0.85
-XGBoost	~83%	~76%	~0.88
-✅ XGBoost outperformed Logistic Regression significantly
-💰 Business Cost Analysis
-In loan prediction:
-❌ False Negative → High loss (bad loan approved)
-⚠️ False Positive → Opportunity loss
-Cost assumption:
-FN = ₹10,000
-FP = ₹2,000
-Formula:
 Total Cost = (FN × Cost_FN) + (FP × Cost_FP)
-➡️ Model optimized to reduce False Negatives
-📊 Evaluation Metrics
-Accuracy
-Precision
-Recall ⭐ (Most Important)
-F1 Score
-ROC-AUC Curve
-Confusion Matrix
-The confusion matrix (shown in appendix pages) highlights:
-Correct predictions
-Missed defaults
-False alarms
-🔍 Model Interpretability
-Top important features:
-Stress_Ratio
-DTI-based features
-Credit Score
-Income features
-Loan Term
-Feature importance from XGBoost shows engineered features dominate — which is ideal.
-🏗️ Deployment
-Possible deployment options:
-🌐 Streamlit Web App
-🔌 Flask API
-☁️ Cloud (AWS / Azure)
-⚖️ Ethical Considerations
-Avoid bias (gender, caste, etc.)
-Ensure transparency
-Protect user data
-Maintain human oversight
-🚧 Limitations
-Uses historical data only
-No real-time integration
-Limited dataset features
-Class imbalance challenges
-🔮 Future Improvements
-Real-time loan scoring
-Integration with banking systems
-Use advanced models (LightGBM, Neural Networks)
-Add more behavioral & demographic features
-🛠️ Tech Stack
-Python
-Pandas, NumPy
-Scikit-learn
-XGBoost
-Matplotlib / Seaborn
-📌 Conclusion
-This project demonstrates how Machine Learning can significantly improve credit risk prediction. Feature engineering combined with XGBoost delivers strong performance and real-world business value.
-👤 Author
-Maruti Nandan
-MBA (AI & Data Science)
-Graphic Era University
+
+- False Negative = ₹10,000 (high loss)  
+- False Positive = ₹2,000  
+
+---
+
+## 📊 Evaluation Metrics
+
+- Accuracy  
+- Precision  
+- Recall (Most Important)  
+- F1 Score  
+- ROC-AUC  
+- Confusion Matrix  
+
+---
+
+## 🔍 Important Features
+
+- Stress_Ratio  
+- DTI-based features  
+- Credit Score  
+- Income  
+- Loan Term  
+
+---
+
+## 🏗️ Deployment
+
+- Streamlit Web App  
+- Flask API  
+- Cloud (AWS / Azure)  
+
+---
+
+## ⚖️ Ethics
+
+- Avoid bias  
+- Ensure transparency  
+- Protect data privacy  
+- Human oversight required  
+
+---
+
+## 🚧 Limitations
+
+- No real-time data  
+- Limited features  
+- Imbalanced dataset  
+
+---
+
+## 🔮 Future Work
+
+- Real-time prediction system  
+- Integration with banking systems  
+- Advanced models (LightGBM, Neural Networks)  
+
+---
+
+## 🛠️ Tech Stack
+
+- Python  
+- Pandas, NumPy  
+- Scikit-learn  
+- XGBoost  
+
+---
+
+## 👤 Author
+
+**Maruti Nandan**  
+MBA (AI & Data Science)  
+
+---
+
+⭐ If you like this project, give it a star!
