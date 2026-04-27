@@ -1,65 +1,98 @@
-📊 AI-Based Loan Default Prediction
-An end-to-end Machine Learning project that predicts whether a borrower is likely to default on a loan using financial and behavioral features. This system helps financial institutions improve risk assessment and reduce bad loans.
-🚀 Project Overview
-Loan default is a major challenge in banking and fintech. Traditional methods are often slow and inaccurate.
-This project builds a predictive model using:
-Logistic Regression (baseline)
-XGBoost (advanced model)
-The system analyzes borrower data and predicts default risk before loan approval.
-🎯 Objectives
-Build a binary classification model (Default / No Default)
-Maximize recall for defaulters (critical in finance)
-Improve overall accuracy
-Perform feature engineering for better predictions
-Compare multiple ML models
-💼 Business Impact
-📉 Reduce Non-Performing Assets (NPAs)
-💰 Minimize financial losses
-⚡ Faster loan approval decisions
-🎯 Better risk-based pricing
-📊 Improved credit scoring
-🧠 Key Features (Feature Engineering)
-One of the strongest parts of this project is advanced feature engineering:
-1. Loan_per_Month
-Monthly EMI burden
-Helps measure repayment pressure
-2. Income_per_Month
-Converts annual income → monthly income
-Aligns with EMI payments
-3. Interest_Burden
-Combines loan amount + interest rate
-Captures cost of borrowing
-4. DTI_Loan
-Combines Debt-to-Income ratio + loan amount
-Measures leveraged risk
-5. Stress_Ratio ⭐ (Most Important)
-Loan_per_Month / Income_per_Month
-Directly captures financial stress
-Stress Ratio	Risk Level
-< 0.2	Low
-0.2–0.4	Moderate
-> 0.4	High
-> 0.6	Very High 🚨
-6. Credit_DTI_Risk
-Combines credit score weakness + debt pressure
-Uses benchmark score (700)
-📂 Dataset
-Features used:
-Income
-Loan Amount
-Interest Rate
-Credit Score
-Loan Term
-Employment Type
-Marital Status
-Debt-to-Income Ratio
-Default (Target)
-🔍 Exploratory Data Analysis (EDA)
-Key insights:
-Lower credit score → higher default risk
-Higher DTI ratio → higher probability of default
-Financial stress strongly correlates with default
-Dataset shows class imbalance
+# 📊 AI-Based Loan Default Prediction
+
+An end-to-end Machine Learning project that predicts whether a borrower is likely to default on a loan using financial and behavioral features.
+
+---
+
+## 🚀 Project Overview
+
+Loan default is a major challenge in banking and fintech. This project builds a predictive model using Machine Learning to identify high-risk borrowers before loan approval.
+
+---
+
+## 🎯 Objectives
+
+- Build a binary classification model (Default / No Default)
+- Maximize recall for defaulters
+- Improve model accuracy
+- Perform feature engineering
+- Compare multiple ML models
+
+---
+
+## 💼 Business Impact
+
+- Reduce bad loans (NPAs)
+- Improve credit risk assessment
+- Faster loan approvals
+- Better financial decision-making
+
+---
+
+## 🧠 Feature Engineering
+
+- **Loan_per_Month** → Monthly EMI burden  
+- **Income_per_Month** → Monthly income  
+- **Interest_Burden** → Loan cost pressure  
+- **DTI_Loan** → Debt + loan risk  
+- **Stress_Ratio** → EMI / Income (most important)  
+- **Credit_DTI_Risk** → Credit weakness + debt  
+
+---
+
+## 📂 Dataset Features
+
+- Income  
+- Loan Amount  
+- Interest Rate  
+- Credit Score  
+- Loan Term  
+- Employment Type  
+- Marital Status  
+- Debt-to-Income Ratio  
+- Default (Target)  
+
+---
+
+## 🔍 Key Insights
+
+- Lower credit score → higher default risk  
+- Higher DTI → higher risk  
+- Financial stress strongly predicts default  
+- Dataset is imbalanced  
+
+---
+
+## ⚙️ Methodology
+
+1. Data Cleaning  
+2. Feature Engineering  
+3. Train-Test Split  
+4. SMOTE (handle imbalance)  
+5. Model Training  
+6. Hyperparameter Tuning  
+7. Cross Validation  
+8. Evaluation  
+
+---
+
+## 🤖 Models Used
+
+- Logistic Regression  
+- XGBoost  
+
+---
+
+## 📈 Results
+
+| Model                | Accuracy | Recall | ROC-AUC |
+|---------------------|----------|--------|--------|
+| Logistic Regression | ~68%     | ~69%   | ~0.85  |
+| XGBoost             | ~83%     | ~76%   | ~0.88  |
+
+---
+
+## 💰 Business Cost Formula
 ⚙️ Methodology
 Data Cleaning
 Feature Engineering
